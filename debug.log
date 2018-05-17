@@ -1,0 +1,1 @@
+[0321/075033.404:ERROR:file_io_win.cc(179)] CreateFile C:\Users\PC-ASUS\AppData\Local\Temp\scoped_dir10560_28518\Crashpad\settings.dat: Le processus ne peut pas accéder au fichier car ce fichier est utilisé par un autre processus. (0x20)
