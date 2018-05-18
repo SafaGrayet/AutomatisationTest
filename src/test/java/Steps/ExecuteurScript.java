@@ -26,7 +26,7 @@ public class ExecuteurScript {
         this.base = base;
     }
     @And("^je créé la varible de processus Hello de type texte$")
-    public void jeCrééLaVaribleDeProcessusHelloDeTypeTexte() throws Throwable {
+    public void jeCreeLaVaribleDeProcessusHelloDeTypeTexte() throws Throwable {
         Thread.sleep(3000);
 
 
@@ -66,7 +66,7 @@ public class ExecuteurScript {
     }
 
     @And("^je réalise le workflow d'exécuteur de script$")
-    public void jeRéaliseLeWorkflowDExécuteurDeScript() throws Throwable {
+    public void jeRealiseLeWorkflowDExecuteurDeScript() throws Throwable {
         Thread.sleep(3000);
 
 
@@ -138,7 +138,7 @@ public class ExecuteurScript {
     }
 
     @And("^je créé le formulaire contenat le champ Hello dans la tache utilisateur$")
-    public void jeCrééLeFormulaireContenatLeChampHelloDansLaTacheUtilisateur() throws Throwable {
+    public void jeCreeLeFormulaireContenatLeChampHelloDansLaTacheUtilisateur() throws Throwable {
         Thread.sleep(5000);
         bot.mouseMove(1350, 300);
         bot.mousePress(InputEvent.BUTTON1_DOWN_MASK);
@@ -177,7 +177,7 @@ public class ExecuteurScript {
     }
 
     @And("^je configure l'action de la tache système exécueur script$")
-    public void jeConfigureLActionDeLaTacheSystèmeExécueurScript() throws Throwable {
+    public void jeConfigureLActionDeLaTacheSystemeExecueurScript() throws Throwable {
 
         Thread.sleep(2000);
 
@@ -215,7 +215,7 @@ public class ExecuteurScript {
     }
         String h="";
     @Then("^je vois \"([^\"]*)\" affiché dans le formulaire$")
-    public void jeVoisAffichéDansLeFormulaire(String arg0) throws Throwable {
+    public void jeVoisAfficheDansLeFormulaire(String arg0) throws Throwable {
         Thread.sleep(4000);
         base.driver.switchTo().frame(base.driver.findElement(By.xpath("//iframe[@id='formioFormIframe']")));
         Thread.sleep(2000);
