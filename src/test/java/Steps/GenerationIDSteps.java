@@ -133,8 +133,8 @@ public class GenerationIDSteps {
 
         base.driver.findElement(By.xpath("//button[contains(@id,'form_prop_wdm_workflowServiceTaskProcessing-cntrl-editProcessing-button-button')]")).click();
         base.driver.manage().timeouts().implicitlyWait(1000000000,TimeUnit.SECONDS);
-        WebDriverWait some_element = new WebDriverWait(base.driver,100);
-         some_element.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[contains(@name,'Format')]")));
+        //WebDriverWait some_element = new WebDriverWait(base.driver,100);
+         //some_element.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[contains(@name,'Format')]")));
         base.driver.findElement(By.xpath("//input[contains(@name,'Format')]")).clear();
          base.driver.findElement(By.xpath("//input[contains(@name,'Format')]")).sendKeys("${counter:test}");
 
