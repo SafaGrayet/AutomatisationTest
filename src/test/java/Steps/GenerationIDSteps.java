@@ -25,7 +25,7 @@ public class GenerationIDSteps {
         this.base = base;
     }
     @And("^je réalise le workflow de \"([^\"]*)\"$")
-    public void jeRéaliseLeWorkflowDe(String arg0) throws Throwable {
+    public void jeRealiseLeWorkflowDe(String arg0) throws Throwable {
 
         Actions builder = new Actions(base.driver);
         base.driver.manage().timeouts().implicitlyWait(1000000000, TimeUnit.SECONDS);
@@ -94,7 +94,7 @@ public class GenerationIDSteps {
     }
     int val=8;
     @Then("^Le compteur nommé \"([^\"]*)\"qu'on a déjà créé s'incrémente avec la pas d'incrémentation$")
-    public void leCompteurNomméQuOnADéjàCrééSIncrémenteAvecLaPasDIncrémentation(String arg0) throws Throwable {
+    public void leCompteurNommeQuOnADejeCreeSIncrementeAvecLaPasDIncrementation(String arg0) throws Throwable {
         Thread.sleep(3000);
 
        String compt=base.driver.findElement(By.xpath("//td[contains(@headers,'-th-value')]//div[@class='yui-dt-liner']")).getText();
@@ -108,7 +108,7 @@ public class GenerationIDSteps {
     }
 
     @And("^je configure l'action de la tache système Génération ID$")
-    public void jeConfigureLActionDeLaTacheSystèmeGénérationID() throws Throwable {
+    public void jeConfigureLActionDeLaTacheSystemeGenerationID() throws Throwable {
         Thread.sleep(4000);
         bot.mouseMove(1350, 300);
         bot.mousePress(InputEvent.BUTTON1_DOWN_MASK);
@@ -152,7 +152,7 @@ public class GenerationIDSteps {
     }
 
     @And("^je lance le processus Générer Identifiant$")
-    public void jeLanceLeProcessusGénérerIdentifiant() throws Throwable {
+    public void jeLanceLeProcessusGenererIdentifiant() throws Throwable {
         base.driver.findElement(By.linkText("Générer Identifiant")).click();
         Thread.sleep(5000);
         //bouton lancer
