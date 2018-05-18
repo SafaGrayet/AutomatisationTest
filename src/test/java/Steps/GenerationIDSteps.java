@@ -87,8 +87,8 @@ public class GenerationIDSteps {
 
     @When("^je cliquer sur \"([^\"]*)\"$")
     public void jeCliquerSur(String arg0) throws Throwable {
-        WebDriverWait some_element = new WebDriverWait(base.driver,100);
-        some_element.until(ExpectedConditions.visibilityOfElementLocated(By.linkText("Gestion des compteurs")));
+        //WebDriverWait some_element = new WebDriverWait(base.driver,100);
+       // some_element.until(ExpectedConditions.visibilityOfElementLocated(By.linkText("Gestion des compteurs")));
         base.driver.findElement(By.linkText("Gestion des compteurs")).click();
 
     }
