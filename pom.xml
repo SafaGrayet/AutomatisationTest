@@ -28,6 +28,7 @@
     </build>
 
     <dependencies>
+    
         <!-- https://mvnrepository.com/artifact/info.cukes/cucumber-java -->
         <dependency>
             <groupId>info.cukes</groupId>
@@ -93,4 +94,9 @@
 
 
     </dependencies>
+           <properties>
+            <maven.compiler.source>1.9</maven.compiler.source>
+            <maven.compiler.target>1.9</maven.compiler.target>
+        </properties>
+
 </project>
