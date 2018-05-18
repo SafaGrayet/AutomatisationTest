@@ -29,7 +29,7 @@ public class CopieDepDoc {
         this.base = base;
     }
     @And("^je réalise le workflow Déplacement d'un document statique dans un emplacement statique$")
-    public void jeRéaliseLeWorkflowDéplacementDUnDocumentStatiqueDansUnEmplacementStatique() throws Throwable {
+    public void jeRealiseLeWorkflowDeplacementDUnDocumentStatiqueDansUnEmplacementStatique() throws Throwable {
         Thread.sleep(2000);
         int mask = InputEvent.BUTTON1_DOWN_MASK;
         bot.mouseMove(1350, 300);
@@ -82,7 +82,7 @@ public class CopieDepDoc {
     }
 
     @And("^je configure l'action de la tache système Déplacement d'un document statique dans un emplacement statique$")
-    public void jeConfigureLActionDeLaTacheSystèmeDéplacementDUnDocumentStatiqueDansUnEmplacementStatique() throws Throwable {
+    public void jeConfigureLActionDeLaTacheSystemeDeplacementDUnDocumentStatiqueDansUnEmplacementStatique() throws Throwable {
 
         Thread.sleep(2000);
 
@@ -129,7 +129,7 @@ public class CopieDepDoc {
     }
 
     @When("^je lance le processus Déplacement d'un document statique dans un emplacement statique$")
-    public void jeLanceLeProcessusDéplacementDUnDocumentStatiqueDansUnEmplacementStatique() throws Throwable {
+    public void jeLanceLeProcessusDeplacementDUnDocumentStatiqueDansUnEmplacementStatique() throws Throwable {
         Thread.sleep(2000);
         base.driver.findElement(By.linkText("Déplacement d'un document statique dans un emplacement statique")).click();
         Thread.sleep(5000);
@@ -140,7 +140,7 @@ public class CopieDepDoc {
     }
 
     @Then("^je vois le document est bien placer dans l'emplacemrnt indiqué statiquement$")
-    public void jeVoisLeDocumentEstBienPlacerDansLEmplacemrntIndiquéStatiquement() throws Throwable {
+    public void jeVoisLeDocumentEstBienPlacerDansLEmplacemrntIndiqueStatiquement() throws Throwable {
         base.driver.findElement(By.linkText("Filigrane")).click();
         Thread.sleep(2000);
        String nn= base.driver.findElement(By.xpath("//a[contains(text(),'CV_Grayet_Safa.pdf')]")).getText();
@@ -152,7 +152,7 @@ public class CopieDepDoc {
     }
 
     @Then("^je réalise le workflow de Déplacement d'un document dynamique dans un emplacement statique$")
-    public void jeRéaliseLeWorkflowDeDéplacementDUnDocumentDynamiqueDansUnEmplacementStatique() throws Throwable {
+    public void jerealiseLeWorkflowDeDeplacementDUnDocumentDynamiqueDansUnEmplacementStatique() throws Throwable {
         Thread.sleep(2000);
         int mask = InputEvent.BUTTON1_DOWN_MASK;
         bot.mouseMove(1350, 300);
@@ -196,7 +196,7 @@ public class CopieDepDoc {
     }
 
     @And("^je créé le formulaire contenat le champs fichier dans le noeud de début$")
-    public void jeCrééLeFormulaireContenatLeChampsFichierDansLeNoeudDeDébut() throws Throwable {
+    public void jeCreeLeFormulaireContenatLeChampsFichierDansLeNoeudDeDebut() throws Throwable {
         Thread.sleep(5000);
         bot.mouseMove(1350, 300);
         bot.mousePress(InputEvent.BUTTON1_DOWN_MASK);
@@ -237,7 +237,7 @@ public class CopieDepDoc {
     }
 
     @And("^je configure la tache système Déplacement d'un document dynamique dans un emplacement statique$")
-    public void jeConfigureLaTacheSystèmeDéplacementDUnDocumentDynamiqueDansUnEmplacementStatique() throws Throwable {
+    public void jeConfigureLaTacheSystemeDeplacementDUnDocumentDynamiqueDansUnEmplacementStatique() throws Throwable {
         //cliquer sur la tache système
         builder.moveToElement( base.driver.findElement(By.xpath("//div[contains(@id,'-designer')]")), 300, 300).click().build().perform();
         //scroll down
@@ -269,19 +269,19 @@ public class CopieDepDoc {
         base.driver.manage().timeouts().implicitlyWait(1000000000,TimeUnit.SECONDS);
         //cliquer sur le boutton sélectionner
         base.driver.findElement(By.xpath("//button[contains(text(),'Sélectionner')]")).click();
-        WebDriverWait some_element = new WebDriverWait(base.driver,10000);
-        some_element.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[contains(text(),'Filigrane')]")));
+        WebDriverWait someelement = new WebDriverWait(base.driver,10000);
+        someelement.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[contains(text(),'Filigrane')]")));
         //cliquer sur le dossier Filigrane
         base.driver.findElement(By.xpath("//span[contains(text(),'Filigrane')]")).click();
         //cliquer sur OK
         base.driver.findElement(By.xpath("//button[contains(text(),'OK')]")).click();
-        WebDriverWait some_elemet = new WebDriverWait(base.driver,10000);
-        some_elemet.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[contains(text(),'Enregistrer')]")));
+        WebDriverWait someelemet = new WebDriverWait(base.driver,10000);
+        someelemet.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[contains(text(),'Enregistrer')]")));
         base.driver.findElement(By.xpath("//button[contains(text(),'Enregistrer')]")).click();
     }
 
     @When("^je lance le processus Déplacement d'un document dynamique dans un emplacement statique$")
-    public void jeLanceLeProcessusDéplacementDUnDocumentDynamiqueDansUnEmplacementStatique() throws Throwable {
+    public void jeLanceLeProcessusDeplacementDUnDocumentDynamiqueDansUnEmplacementStatique() throws Throwable {
         base.driver.findElement(By.linkText("Déplacement d'un document dynamique dans un emplacement statique")).click();
 
         Thread.sleep(2000);
@@ -301,7 +301,7 @@ public class CopieDepDoc {
     }
 
     @And("^je trouve le document est bien déplacer dans l'emplacemrnt indiqué statiquemente$")
-    public void jeTrouveLeDocumentEstBienDéplacerDansLEmplacemrntIndiquéStatiquemente() throws Throwable {
+    public void jeTrouveLeDocumentEstBienDeplacerDansLEmplacemrntIndiqueStatiquemente() throws Throwable {
         WebDriverWait some_element = new WebDriverWait(base.driver,100);
         some_element.until(ExpectedConditions.visibilityOfElementLocated(By.linkText("Filigrane")));
         base.driver.findElement(By.linkText("Filigrane")).click();
@@ -315,7 +315,7 @@ public class CopieDepDoc {
     }
 
     @Then("^je réalise le workflow de Déplacement d'un document statique dans un emplacement dynamique$")
-    public void jeRéaliseLeWorkflowDeDéplacementDUnDocumentStatiqueDansUnEmplacementDynamique() throws Throwable {
+    public void jeRealiseLeWorkflowDeDeplacementDUnDocumentStatiqueDansUnEmplacementDynamique() throws Throwable {
         Thread.sleep(2000);
         int mask = InputEvent.BUTTON1_DOWN_MASK;
         bot.mouseMove(1350, 300);
@@ -364,7 +364,7 @@ public class CopieDepDoc {
     }
 
     @And("^je créé le formulaire contenat le champ dossier dans le noeud de début$")
-    public void jeCrééLeFormulaireContenatLeChampDossierDansLeNoeudDeDébut() throws Throwable {
+    public void jeCreeLeFormulaireContenatLeChampDossierDansLeNoeudDeDebut() throws Throwable {
         Thread.sleep(5000);
         bot.mouseMove(1350, 300);
         bot.mousePress(InputEvent.BUTTON1_DOWN_MASK);
@@ -404,7 +404,7 @@ public class CopieDepDoc {
     }
 
     @And("^je configure la tache système Déplacement d'un document statique dans un emplacement dynamique$")
-    public void jeConfigureLaTacheSystèmeDéplacementDUnDocumentStatiqueDansUnEmplacementDynamique() throws Throwable {
+    public void jeConfigureLaTacheSystemeDeplacementDUnDocumentStatiqueDansUnEmplacementDynamique() throws Throwable {
                Thread.sleep(2000);
 
         builder.moveToElement( base.driver.findElement(By.xpath("//div[contains(@id,'-designer')]")), 300, 300).click().build().perform();
@@ -446,7 +446,7 @@ public class CopieDepDoc {
     }
 
     @When("^je lance le processus Déplacement d'un document statique dans un emplacement dynamique$")
-    public void jeLanceLeProcessusDéplacementDUnDocumentStatiqueDansUnEmplacementDynamique() throws Throwable {
+    public void jeLanceLeProcessusDeplacementDUnDocumentStatiqueDansUnEmplacementDynamique() throws Throwable {
         base.driver.findElement(By.linkText("Déplacement d'un document statique dans un emplacement dynamique")).click();
         Thread.sleep(2000);
 
@@ -478,7 +478,7 @@ public class CopieDepDoc {
     }
 
     @And("^je trouve le fichier déplacé dans l'enplacement dynamique indiqué dans le formulaire$")
-    public void jeTrouveLeFichierDéplacéDansLEnplacementDynamiqueIndiquéDansLeFormulaire() throws Throwable {
+    public void jeTrouveLeFichierDeplaceDansLEnplacementDynamiqueIndiqueDansLeFormulaire() throws Throwable {
         WebDriverWait some_element = new WebDriverWait(base.driver,100);
         some_element.until(ExpectedConditions.visibilityOfElementLocated(By.linkText("Filigrane")));
         base.driver.findElement(By.linkText("Filigrane")).click();
@@ -492,7 +492,7 @@ public class CopieDepDoc {
     }
 
     @Then("^je réalise le workflow de Déplacement d'un document dynamique dans un emplavement dynamique$")
-    public void jeRéaliseLeWorkflowDeDéplacementDUnDocumentDynamiqueDansUnEmplavementDynamique() throws Throwable {
+    public void jeRealiseLeWorkflowDeDeplacementDUnDocumentDynamiqueDansUnEmplavementDynamique() throws Throwable {
         Thread.sleep(2000);
         int mask = InputEvent.BUTTON1_DOWN_MASK;
         bot.mouseMove(1350, 300);
@@ -536,7 +536,7 @@ public class CopieDepDoc {
     }
 
     @And("^je créé le formulaire contenat les champs fichier,dossier dans le noeud de début$")
-    public void jeCrééLeFormulaireContenatLesChampsFichierDossierDansLeNoeudDeDébut() throws Throwable {
+    public void jeCreeLeFormulaireContenatLesChampsFichierDossierDansLeNoeudDeDebut() throws Throwable {
         Thread.sleep(5000);
         bot.mouseMove(1350, 300);
         bot.mousePress(InputEvent.BUTTON1_DOWN_MASK);
@@ -588,7 +588,7 @@ public class CopieDepDoc {
     }
 
     @And("^je configure la tache système Déplacement d'un document dynamique dans un emplavement dynamique$")
-    public void jeConfigureLaTacheSystèmeDéplacementDUnDocumentDynamiqueDansUnEmplavementDynamique() throws Throwable {
+    public void jeConfigureLaTacheSystemeDeplacementDUnDocumentDynamiqueDansUnEmplavementDynamique() throws Throwable {
         Thread.sleep(2000);
 
         builder.moveToElement( base.driver.findElement(By.xpath("//div[contains(@id,'-designer')]")), 300, 300).click().build().perform();
@@ -630,7 +630,7 @@ public class CopieDepDoc {
     }
 
     @When("^je lance le processus Déplacement d'un document dynamique dans un emplavement dynamique$")
-    public void jeLanceLeProcessusDéplacementDUnDocumentDynamiqueDansUnEmplavementDynamique() throws Throwable {
+    public void jeLanceLeProcessusDeplacementDUnDocumentDynamiqueDansUnEmplavementDynamique() throws Throwable {
         Thread.sleep(2000);
         base.driver.findElement(By.linkText("Déplacement d'un document dynamique dans un emplavement dynamique")).click();
         Thread.sleep(2000);
@@ -665,7 +665,7 @@ public class CopieDepDoc {
     }
 
     @And("^je trouve le fichier déplacé dynamiqument dans l'emplacement dynamique$")
-    public void jeTrouveLeFichierDéplacéDynamiqumentDansLEmplacementDynamique() throws Throwable {
+    public void jeTrouveLeFichierDeplaceDynamiqumentDansLEmplacementDynamique() throws Throwable {
         WebDriverWait some_element = new WebDriverWait(base.driver,100);
         some_element.until(ExpectedConditions.visibilityOfElementLocated(By.linkText("Filigrane")));
         base.driver.findElement(By.linkText("Filigrane")).click();
@@ -679,7 +679,7 @@ public class CopieDepDoc {
     }
 
     @And("^je réalise le workflow Copie d'un document statique dans un emplacement statique$")
-    public void jeRéaliseLeWorkflowCopieDUnDocumentStatiqueDansUnEmplacementStatique() throws Throwable {
+    public void jeRealiseLeWorkflowCopieDUnDocumentStatiqueDansUnEmplacementStatique() throws Throwable {
         Thread.sleep(2000);
         int mask = InputEvent.BUTTON1_DOWN_MASK;
         bot.mouseMove(1350, 300);
@@ -729,7 +729,7 @@ public class CopieDepDoc {
     }
 
     @And("^je configure l'action de la tache système Copie d'un document statique dans un emplacement statique$")
-    public void jeConfigureLActionDeLaTacheSystèmeCopieDUnDocumentStatiqueDansUnEmplacementStatique() throws Throwable {
+    public void jeConfigureLActionDeLaTacheSystemeCopieDUnDocumentStatiqueDansUnEmplacementStatique() throws Throwable {
         Thread.sleep(2000);
 
         builder.moveToElement( base.driver.findElement(By.xpath("//div[contains(@id,'-designer')]")), 300, 300).click().build().perform();
@@ -788,7 +788,7 @@ public class CopieDepDoc {
     }
 
     @Then("^je trouve le document est bien copier dans l'emplacemrnt indiqué statiquement$")
-    public void jeTrouveLeDocumentEstBienCopierDansLEmplacemrntIndiquéStatiquement() throws Throwable {
+    public void jeTrouveLeDocumentEstBienCopierDansLEmplacemrntIndiqueStatiquement() throws Throwable {
         base.driver.findElement(By.linkText("Filigrane")).click();
         Thread.sleep(2000);
         String nn= base.driver.findElement(By.xpath("//a[contains(text(),'Chapitre1_PFE_Safa.pdf')]")).getText();
@@ -799,7 +799,7 @@ public class CopieDepDoc {
     }
 
     @Then("^je réalise le workflow de Copie d'un document dynamique dans un emplacement statique$")
-    public void jeRéaliseLeWorkflowDeCopieDUnDocumentDynamiqueDansUnEmplacementStatique() throws Throwable {
+    public void jeRealiseLeWorkflowDeCopieDUnDocumentDynamiqueDansUnEmplacementStatique() throws Throwable {
         Thread.sleep(2000);
         int mask = InputEvent.BUTTON1_DOWN_MASK;
         bot.mouseMove(1350, 300);
@@ -842,7 +842,7 @@ public class CopieDepDoc {
     }
 
     @And("^je configure la tache système Copie d'un document dynamique dans un emplacement statique$")
-    public void jeConfigureLaTacheSystèmeCopieDUnDocumentDynamiqueDansUnEmplacementStatique() throws Throwable {
+    public void jeConfigureLaTacheSystemeCopieDUnDocumentDynamiqueDansUnEmplacementStatique() throws Throwable {
         //cliquer sur la tache système
         builder.moveToElement( base.driver.findElement(By.xpath("//div[contains(@id,'-designer')]")), 300, 300).click().build().perform();
         //scroll down
@@ -906,7 +906,7 @@ public class CopieDepDoc {
 
 
     @And("^je trouve le document est bien copié dans l'emplacemrnt indiqué statiquement$")
-    public void jeTrouveLeDocumentEstBienCopiéDansLEmplacemrntIndiquéStatiquement() throws Throwable {
+    public void jeTrouveLeDocumentEstBienCopieDansLEmplacemrntIndiqueStatiquement() throws Throwable {
         WebDriverWait some_element = new WebDriverWait(base.driver,100);
         some_element.until(ExpectedConditions.visibilityOfElementLocated(By.linkText("Filigrane")));
         base.driver.findElement(By.linkText("Filigrane")).click();
@@ -921,7 +921,7 @@ public class CopieDepDoc {
 
 
     @Then("^je réalise le workflow de Copie d'un document statique dans un emplacement dynamique$")
-    public void jeRéaliseLeWorkflowDeCopieDUnDocumentStatiqueDansUnEmplacementDynamique() throws Throwable {
+    public void jeRealiseLeWorkflowDeCopieDUnDocumentStatiqueDansUnEmplacementDynamique() throws Throwable {
         Thread.sleep(2000);
         int mask = InputEvent.BUTTON1_DOWN_MASK;
         bot.mouseMove(1350, 300);
@@ -970,7 +970,7 @@ public class CopieDepDoc {
     }
 
     @And("^je configure la tache système Copie d'un document statique dans un emplacement dynamique$")
-    public void jeConfigureLaTacheSystèmeCopieDUnDocumentStatiqueDansUnEmplacementDynamique() throws Throwable {
+    public void jeConfigureLaTacheSystemeCopieDUnDocumentStatiqueDansUnEmplacementDynamique() throws Throwable {
         Thread.sleep(2000);
 
         builder.moveToElement( base.driver.findElement(By.xpath("//div[contains(@id,'-designer')]")), 300, 300).click().build().perform();
@@ -1046,7 +1046,7 @@ public class CopieDepDoc {
     }
 
     @And("^je trouve le fichier Copié dans l'enplacement dynamique indiqué dans le formulaire$")
-    public void jeTrouveLeFichierCopiéDansLEnplacementDynamiqueIndiquéDansLeFormulaire() throws Throwable {
+    public void jeTrouveLeFichierCopieDansLEnplacementDynamiqueIndiqueDansLeFormulaire() throws Throwable {
         WebDriverWait some_element = new WebDriverWait(base.driver,100);
         some_element.until(ExpectedConditions.visibilityOfElementLocated(By.linkText("Filigrane")));
         base.driver.findElement(By.linkText("Filigrane")).click();
@@ -1060,31 +1060,27 @@ public class CopieDepDoc {
     }
 
     @Then("^je réalise le workflow de Copie d'un document dynamique dans un emplavement dynamique$")
-    public void jeRéaliseLeWorkflowDeCopieDUnDocumentDynamiqueDansUnEmplavementDynamique() throws Throwable {
-        // Write code here that turns the phrase above into concrete actions
-        throw new PendingException();
+    public void jeRealiseLeWorkflowDeCopieDUnDocumentDynamiqueDansUnEmplavementDynamique() throws Throwable {
+
     }
 
     @And("^je configure la tache système Copie d'un document dynamique dans un emplavement dynamique$")
-    public void jeConfigureLaTacheSystèmeCopieDUnDocumentDynamiqueDansUnEmplavementDynamique() throws Throwable {
-        // Write code here that turns the phrase above into concrete actions
-        throw new PendingException();
+    public void jeConfigureLaTacheSystemeCopieDUnDocumentDynamiqueDansUnEmplavementDynamique() throws Throwable {
+
     }
 
     @When("^je lance le processus Copie d'un document dynamique dans un emplavement dynamique$")
     public void jeLanceLeProcessusCopieDUnDocumentDynamiqueDansUnEmplavementDynamique() throws Throwable {
-        // Write code here that turns the phrase above into concrete actions
-        throw new PendingException();
+
     }
 
     @And("^je trouve le fichier Copié dynamiqument dans l'emplacement dynamique$")
-    public void jeTrouveLeFichierCopiéDynamiqumentDansLEmplacementDynamique() throws Throwable {
-        // Write code here that turns the phrase above into concrete actions
-        throw new PendingException();
+    public void jeTrouveLeFichierCopieDynamiqumentDansLEmplacementDynamique() throws Throwable {
+
     }
 
     @And("^je créé la varible de processus fichier de type Contenu GED contenu$")
-    public void jeCrééLaVaribleDeProcessusFichierDeTypeContenuGEDContenu() throws Throwable {
+    public void jeCreeLaVaribleDeProcessusFichierDeTypeContenuGEDContenu() throws Throwable {
         Thread.sleep(3000);
 
 
@@ -1131,7 +1127,7 @@ public class CopieDepDoc {
     }
 
     @And("^je créé la varible de processus dossier de type Contenu GED$")
-    public void jeCrééLaVaribleDeProcessusDossierDeTypeContenuGED() throws Throwable {
+    public void jeCreeLaVaribleDeProcessusDossierDeTypeContenuGED() throws Throwable {
         WebDriverWait some_element = new WebDriverWait(base.driver,100);
         some_element.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[contains(@id,'-designer')]")));
         Thread.sleep(2000);
