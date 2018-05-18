@@ -33,8 +33,10 @@ public class InsertionBDSteps {
 
         this.base = base;
     }
+
+
     @And("^je réalise le workflow d'insertion dans la base de doonée$")
-    public void jeRéaliseLeWorkflowDInsertionDansLaBaseDeDoonée() throws Throwable {
+    public void jeRealiseLeWorkflowDInsertionDansLaBaseDeDoonee() throws Throwable {
         Thread.sleep(2000);
         int mask = InputEvent.BUTTON1_DOWN_MASK;
         bot.mouseMove(1350, 300);
@@ -74,10 +76,11 @@ public class InsertionBDSteps {
 
         builder.moveToElement( base.driver.findElement(By.xpath("//div[contains(@id,'-designer')]")), 400, 300).click().build().perform();
         base.driver.findElement(By.id("select")).click();
+        return;
     }
 
     @And("^je créé le formulaire contenat les champs nom et prénom dans le noeud de début$")
-    public void jeCrééLeFormulaireContenatLesChampsNomEtPrénomDansLeNoeudDeDébut() throws Throwable {
+    public void jeCreeLeFormulaireContenatLesChampsNomEtPrenomDansLeNoeudDeDebut() throws Throwable {
         Thread.sleep(5000);
         bot.mouseMove(1350, 300);
         bot.mousePress(InputEvent.BUTTON1_DOWN_MASK);
@@ -119,10 +122,11 @@ public class InsertionBDSteps {
         base.driver.switchTo().defaultContent();
         Thread.sleep(2000);
         base.driver.findElement(By.xpath("//button[contains(text(),'Sauvegarder')]")).click();
+        return;
     }
 
     @And("^je configure l'action de la tache système insertion dans la base de donnée$")
-    public void jeConfigureLActionDeLaTacheSystèmeInsertionDansLaBaseDeDonnée() throws Throwable {
+    public void jeConfigureLActionDeLaTacheSystemeInsertionDansLaBaseDeDonnee() throws Throwable {
         Thread.sleep(2000);
 
         builder.moveToElement( base.driver.findElement(By.xpath("//div[contains(@id,'-designer')]")), 300, 300).click().build().perform();
@@ -154,11 +158,12 @@ public class InsertionBDSteps {
 
         ((JavascriptExecutor)base.driver).executeScript("document.getElementsByClassName('yui-button yui-submit-button')[0].click();");
         Thread.sleep(1000);
+        return;
 
     }
 
     @When("^je lance le processus Insertion dans la base de donnée$")
-    public void jeLanceLeProcessusInsertionDansLaBaseDeDonnée() throws Throwable {
+    public void jeLanceLeProcessusInsertionDansLaBaseDeDonnee() throws Throwable {
         base.driver.findElement(By.linkText("Insertion dans la base de données")).click();
 
         Thread.sleep(4000);
@@ -173,10 +178,11 @@ public class InsertionBDSteps {
         //bouton lancer
         base.driver.findElement(By.xpath("//button[contains(text(),'Lancer')]")).click();
         Thread.sleep(2000);
+    return;
     }
 
     @Then("^je vois que les données saisies dans le formulaire sont bien insérer dans la base de donnée$")
-    public void jeVoisQueLesDonnéesSaisiesDansLeFormulaireSontBienInsérerDansLaBaseDeDonnée() throws Throwable {
+    public void jeVoisQueLesDonneesSaisiesDansLeFormulaireSontBienInsererDansLaBaseDeDonnee() throws Throwable {
 
         Class.forName("org.postgresql.Driver");
         DriverManager.getConnection("jdbc:postgresql://localhost:5434/alfresco","alfresco","Safa1994");
@@ -196,7 +202,7 @@ public class InsertionBDSteps {
         }
 
 
-
+return;
 
 
     }
