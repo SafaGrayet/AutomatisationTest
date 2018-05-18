@@ -27,7 +27,7 @@ public class AlimentationVariableSteps {
         this.base = base;
     }
     @And("^je créé un nouveau processus \"([^\"]*)\"$")
-    public void jeCrééUnNouveauProcessus(String arg0) throws Throwable {
+    public void jeCreeUnNouveauProcessus(String arg0) throws Throwable {
         //cliquer sur le boutton de création d'un nouveau processus
         base.driver.findElement(By.id("page_x002e_ctool_x002e_process_x0023_default-newWorkflow-button-button")).click();
         base.driver.manage().timeouts().implicitlyWait(1000000000, TimeUnit.SECONDS);
@@ -59,7 +59,7 @@ public class AlimentationVariableSteps {
 
 
     @And("^je réalise le workflow d'Alimentaion variable$")
-    public void jeRéaliseLeWorkflowDAlimentaionVariable() throws Throwable {
+    public void jeRealiseLeWorkflowDAlimentaionVariable() throws Throwable {
 
         Thread.sleep(3000);
 
@@ -146,7 +146,7 @@ public class AlimentationVariableSteps {
     }
 
     @And("^je créé la varible de processus nom de type texte$")
-    public void jeCrééLaVaribleDeProcessusDeTypeTexte() throws Throwable {
+    public void jeCreeLaVaribleDeProcessusDeTypeTexte() throws Throwable {
         Thread.sleep(3000);
 
 
@@ -191,7 +191,7 @@ public class AlimentationVariableSteps {
     }
 
     @And("^je créé la variable de processus prenom de type texte$")
-    public void jeCrééLaVariableDeProcessusDeTypeTexte() throws Throwable {
+    public void jeCreeLaVariableDeProcessusDeTypeTexte() throws Throwable {
         Thread.sleep(1000);
         //cliquer sur l'icone (+) pour ajouter une variablede processus
         Robot bot = new Robot();
@@ -213,7 +213,7 @@ public class AlimentationVariableSteps {
     }
 
     @And("^je créé le formulaire dans la tache utilisateur$")
-    public void jeCrééLeFormulaireDansLaTacheUtilisateur() throws Throwable {
+    public void jeCreeLeFormulaireDansLaTacheUtilisateur() throws Throwable {
         Thread.sleep(3000);
         //placer le scroll en haut
 
@@ -267,7 +267,7 @@ public class AlimentationVariableSteps {
     }
 
     @And("^je configure l'action de la tache système \"([^\"]*)\"$")
-    public void jeConfigureLActionDeLaTacheSystème(String arg0) throws Throwable {
+    public void jeConfigureLActionDeLaTacheSysteme(String arg0) throws Throwable {
         //cliquer sur la tache système
         builder.moveToElement( base.driver.findElement(By.xpath("//div[contains(@id,'-designer')]")), 300, 300).click().build().perform();
             //placer le scroll vers le bas
@@ -352,7 +352,7 @@ public class AlimentationVariableSteps {
     }
     String pr="";
     @Then("^je vois le formulaire avec le nom et le prènom de l'initiateur$")
-    public void jeVoisLeFormulaireAvecLeNomEtLePrènomDeLInitiateur() throws Throwable {
+    public void jeVoisLeFormulaireAvecLeNomEtLePrenomDeLInitiateur() throws Throwable {
 
         Thread.sleep(3000);
 
@@ -372,7 +372,7 @@ public class AlimentationVariableSteps {
 
 
     @Given("^je créé un nouveau processus alimentation variable d'un utilisateur dynamique$")
-    public void jeCrééUnNouveauProcessusAlimentationVariableDUnUtilisateurDynamique() throws Throwable {
+    public void jeCreeUnNouveauProcessusAlimentationVariableDUnUtilisateurDynamique() throws Throwable {
         base.driver.findElement(By.id("page_x002e_ctool_x002e_process_x0023_default-newWorkflow-button-button")).click();
         base.driver.manage().timeouts().implicitlyWait(1000000000, TimeUnit.SECONDS);
         Thread.sleep(2000);
@@ -399,7 +399,7 @@ public class AlimentationVariableSteps {
     }
 
     @And("^je créé une variable de processus \"([^\"]*)\" de type personne$")
-    public void jeCrééUneVariableDeProcessusDeTypePersonne(String arg0) throws Throwable {
+    public void jeCreeUneVariableDeProcessusDeTypePersonne(String arg0) throws Throwable {
         Thread.sleep(3000);
 
 
@@ -438,7 +438,7 @@ public class AlimentationVariableSteps {
     }
 
     @And("^je créé le formulaire dans le noeud de début$")
-    public void jeCrééLeFormulaireDansLeNoeudDeDébut() throws Throwable {
+    public void jeCreeLeFormulaireDansLeNoeudDeDebut() throws Throwable {
         Thread.sleep(1000);
         builder.moveToElement( base.driver.findElement(By.xpath("//div[contains(@id,'-designer')]")), 200 , 200).click().build().perform();
 
@@ -474,13 +474,12 @@ public class AlimentationVariableSteps {
     }
 
     @Then("^je vois le formulaire avec le nom et le prènom de l'utilisateur dynamique$")
-    public void jeVoisLeFormulaireAvecLeNomEtLePrènomDeLUtilisateurDynamique() throws Throwable {
-        // Write code here that turns the phrase above into concrete actions
-        throw new PendingException();
+    public void jeVoisLeFormulaireAvecLeNomEtLePrenomDeLUtilisateurDynamique() throws Throwable {
+
     }
 
     @And("^je configure l'action de la tache système Alimentation variable$")
-    public void jeConfigureLActionDeLaTacheSystèmeAlimentationVariable() throws Throwable {
+    public void jeConfigureLActionDeLaTacheSystemeAlimentationVariable() throws Throwable {
         //cliquer sur la tache système
         builder.moveToElement( base.driver.findElement(By.xpath("//div[contains(@id,'-designer')]")), 300, 300).click().build().perform();
         //placer le scoll en bas
@@ -578,7 +577,7 @@ public class AlimentationVariableSteps {
     }
 
     @And("^je créé une variable de processus \"([^\"]*)\" de type \"([^\"]*)\"$")
-    public void jeCrééUneVariableDeProcessusDeType(String arg0, String arg1) throws Throwable {
+    public void jeCreeUneVariableDeProcessusDeType(String arg0, String arg1) throws Throwable {
 
         Thread.sleep(3000);
 
@@ -618,7 +617,7 @@ public class AlimentationVariableSteps {
     }
 
     @And("^je créé la varible de processus \"([^\"]*)\" de type texte$")
-    public void jeCrééLaVaribleDeProcessusDeTypeTexte(String arg0) throws Throwable {
+    public void jeCreeLaVaribleDeProcessusDeTypeTexte(String arg0) throws Throwable {
 
         Thread.sleep(3000);
 
@@ -658,7 +657,7 @@ public class AlimentationVariableSteps {
     }
 
     @And("^je créé le formulaire constitué par la variable groupe dans le noeud de début$")
-    public void jeCrééLeFormulaireConstituéParLaVariableGroupeDansLeNoeudDeDébut() throws Throwable {
+    public void jeCreeLeFormulaireConstitueParLaVariableGroupeDansLeNoeudDeDebut() throws Throwable {
         Thread.sleep(1000);
         builder.moveToElement( base.driver.findElement(By.xpath("//div[contains(@id,'-designer')]")), 200 , 200).click().build().perform();
 
@@ -691,7 +690,7 @@ public class AlimentationVariableSteps {
     }
 
     @And("^je créé le formulaire de la variable role dans la tache utilisateur$")
-    public void jeCrééLeFormulaireDeLaVariableRoleDansLaTacheUtilisateur() throws Throwable {
+    public void jeCreeLeFormulaireDeLaVariableRoleDansLaTacheUtilisateur() throws Throwable {
         Thread.sleep(5000);
         bot.mouseMove(1350, 300);
         bot.mousePress(InputEvent.BUTTON1_DOWN_MASK);
@@ -731,7 +730,7 @@ public class AlimentationVariableSteps {
     }
 
     @And("^je configure l'action de la tache système Alimentation variable d'un groupe dynamique$")
-    public void jeConfigureLActionDeLaTacheSystèmeAlimentationVariableDUnGroupeDynamique() throws Throwable {
+    public void jeConfigureLActionDeLaTacheSystemeAlimentationVariableDUnGroupeDynamique() throws Throwable {
         builder.moveToElement( base.driver.findElement(By.xpath("//div[contains(@id,'-designer')]")), 300, 300).click().build().perform();
         bot.mouseMove(1350, 600);
         bot.mousePress(InputEvent.BUTTON1_DOWN_MASK);
@@ -801,7 +800,6 @@ public class AlimentationVariableSteps {
 
     @Then("^je vois le formulaire avec le role du groupe dynamique$")
     public void jeVoisLeFormulaireAvecLeRoleDuGroupeDynamique() throws Throwable {
-        // Write code here that turns the phrase above into concrete actions
-        throw new PendingException();
+
     }
 }
