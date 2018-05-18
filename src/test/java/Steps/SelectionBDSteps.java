@@ -31,7 +31,7 @@ public class SelectionBDSteps {
         this.base = base;
     }
     @And("^je réalise le workflow de sélection dans la base de doonée$")
-    public void jeRéaliseLeWorkflowDeSélectionDansLaBaseDeDoonée() throws Throwable {
+    public void jeRealiseLeWorkflowDeSelectionDansLaBaseDeDoonee() throws Throwable {
         Thread.sleep(3000);
 
 
@@ -103,7 +103,7 @@ public class SelectionBDSteps {
     }
 
     @And("^je créé le formulaire contenat les champs nom et prénom dans la tache utilisateur$")
-    public void jeCrééLeFormulaireContenatLesChampsNomEtPrénomDansLaTacheSystème() throws Throwable {
+    public void jeCreeLeFormulaireContenatLesChampsNomEtPrenomDansLaTacheSysteme() throws Throwable {
         Thread.sleep(5000);
         bot.mouseMove(1350, 300);
         bot.mousePress(InputEvent.BUTTON1_DOWN_MASK);
@@ -150,7 +150,7 @@ public class SelectionBDSteps {
     }
 
     @And("^je configure l'action de la tache système selection dans la base de données$")
-    public void jeConfigureLActionDeLaTacheSystèmeSelectionDansLaBaseDeDonnées() throws Throwable {
+    public void jeConfigureLActionDeLaTacheSystemeSelectionDansLaBaseDeDonnees() throws Throwable {
         Thread.sleep(2000);
 
         builder.moveToElement( base.driver.findElement(By.xpath("//div[contains(@id,'-designer')]")), 300, 300).click().build().perform();
@@ -205,7 +205,7 @@ public class SelectionBDSteps {
     }
 
     @When("^je lance le processus Sélection dans la base de données$")
-    public void jeLanceLeProcessusSélectionDansLaBaseDeDonnées() throws Throwable {
+    public void jeLanceLeProcessusSelectionDansLaBaseDeDonnees() throws Throwable {
         base.driver.findElement(By.linkText("Sélection de la base de données")).click();
         Thread.sleep(7000);
         //bouton lancer
@@ -214,7 +214,7 @@ public class SelectionBDSteps {
     }
 
     @Then("^je vois que les données de la base de données sont figurer dans le formulaire$")
-    public void jeVoisQueLesDonnéesDeLaBaseDeDonnéesSontFigurerDansLeFormulaire() throws Throwable {
+    public void jeVoisQueLesDonneesDeLaBaseDeDonneesSontFigurerDansLeFormulaire() throws Throwable {
         Class.forName("org.postgresql.Driver");
         DriverManager.getConnection("jdbc:postgresql://localhost:5434/alfresco","alfresco","Safa1994");
         Connection con=DriverManager.getConnection("jdbc:postgresql://localhost:5434/alfresco","alfresco","Safa1994");
