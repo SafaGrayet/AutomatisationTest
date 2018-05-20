@@ -25,14 +25,14 @@ import java.util.concurrent.TimeUnit;
 
 import static Steps.LoginStep.dragAndDropElement;
 
-public class GenerationPDF {
+public class FiligranerPDFSteps {
 
 
     public BaseUtil base;
     Robot bot = new Robot();
     Actions builder = new Actions(base.driver);
 
-    public GenerationPDF(BaseUtil base) throws AWTException {
+    public FiligranerPDFSteps(BaseUtil base) throws AWTException {
 
         this.base = base;
     }
