@@ -157,8 +157,8 @@ public class FiligranerPDFSteps {
         Thread.sleep(2000);
     }
 
-    @And("^je créé le formulaire contenat les champs nom, prénom  dans le noeud de début$")
-    public void jeCreeLeFormulaireContenatLesChampsNomPrenomDansLeNoeudDeDebut() throws Throwable {
+    @And("^je créé le formulaire contenat les champs nom, prénom  dans le noeud de débutt$")
+    public void jeCreeLeFormulaireContenatLesChampsNomPrenomDansLeNoeudDeDebutt() throws Throwable {
         Thread.sleep(5000);
         bot.mouseMove(1350, 300);
         bot.mousePress(InputEvent.BUTTON1_DOWN_MASK);
