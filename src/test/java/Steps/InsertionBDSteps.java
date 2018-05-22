@@ -2,6 +2,7 @@ package Steps;
 
 import Base.BaseUtil;
 import cucumber.api.PendingException;
+import cucumber.api.java.After;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
@@ -34,7 +35,7 @@ public class InsertionBDSteps {
         this.base = base;
     }
 
-
+    @After
     @And("^je réalise le workflow d'insertion dans la base de doonée$")
     public void jeRealiseLeWorkflowDInsertionDansLaBaseDeDoonee() throws Throwable {
         Thread.sleep(2000);
@@ -78,7 +79,7 @@ public class InsertionBDSteps {
         base.driver.findElement(By.id("select")).click();
         return;
     }
-
+    @After
     @And("^je créé le formulaire contenat les champs nom et prénom dans le noeud de début$")
     public void jeCreeLeFormulaireContenatLesChampsNomEtPrenomDansLeNoeudDeDebut() throws Throwable {
         Thread.sleep(5000);
@@ -124,7 +125,7 @@ public class InsertionBDSteps {
         base.driver.findElement(By.xpath("//button[contains(text(),'Sauvegarder')]")).click();
         return;
     }
-
+    @After
     @And("^je configure l'action de la tache système insertion dans la base de donnée$")
     public void jeConfigureLActionDeLaTacheSystemeInsertionDansLaBaseDeDonnee() throws Throwable {
         Thread.sleep(2000);
@@ -161,7 +162,7 @@ public class InsertionBDSteps {
         return;
 
     }
-
+    @After
     @When("^je lance le processus Insertion dans la base de donnée$")
     public void jeLanceLeProcessusInsertionDansLaBaseDeDonnee() throws Throwable {
         base.driver.findElement(By.linkText("Insertion dans la base de données")).click();
@@ -180,7 +181,7 @@ public class InsertionBDSteps {
         Thread.sleep(2000);
     return;
     }
-
+    @After
     @Then("^je vois que les données saisies dans le formulaire sont bien insérer dans la base de donnée$")
     public void jeVoisQueLesDonneesSaisiesDansLeFormulaireSontBienInsererDansLaBaseDeDonnee() throws Throwable {
 
