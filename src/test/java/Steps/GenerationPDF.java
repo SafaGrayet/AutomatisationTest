@@ -2,6 +2,7 @@ package Steps;
 
 import Base.BaseUtil;
 import cucumber.api.PendingException;
+import cucumber.api.java.After;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
@@ -36,6 +37,7 @@ public class GenerationPDF {
 
         this.base = base;
     }
+    @After
     @Then("^je réalise le workflow de génération PDF statique$")
     public void jeRealiseLeWorkflowDeGenerationPDFStatique() throws Throwable {
         Thread.sleep(2000);
@@ -78,7 +80,7 @@ public class GenerationPDF {
         builder.moveToElement( base.driver.findElement(By.xpath("//div[contains(@id,'-designer')]")), 400, 300).click().build().perform();
         base.driver.findElement(By.id("select")).click();
     }
-
+    @After
     @And("^je configure la tache système génération PDF statique$")
     public void jeConfigureLaTacheSystemeGenerationPDFStatique() throws Throwable {
         Thread.sleep(2000);
@@ -138,7 +140,7 @@ public class GenerationPDF {
 
 
     }
-
+     @After
     @When("^je lance le processus Génération d'un PDF statique dans un emplacement statique$")
     public void jeLanceLeProcessusGeneationDUnPDFStatiqueDansUnEmplacementStatique() throws Throwable {
         base.driver.findElement(By.linkText("Génération d'un PDF statique dans un emplacement statique")).click();
@@ -156,7 +158,7 @@ public class GenerationPDF {
         base.driver.findElement(By.xpath("//button[contains(text(),'Lancer')]")).click();
         Thread.sleep(2000);
     }
-
+    @After
     @And("^je créé le formulaire contenat les champs nom, prénom  dans le noeud de début$")
     public void jeCreeLeFormulaireContenatLesChampsNomPrenomDansLeNoeudDeDebut() throws Throwable {
         Thread.sleep(5000);
@@ -201,7 +203,7 @@ public class GenerationPDF {
         Thread.sleep(2000);
         base.driver.findElement(By.xpath("//button[contains(text(),'Sauvegarder')]")).click();
     }
-
+    @After
     @Then("^je consule la dashlet bibliothéque$")
     public void jeConsuleLaDashletBibliotheque() throws Throwable {
         Thread.sleep(2000);
@@ -213,7 +215,8 @@ public class GenerationPDF {
         base.driver.findElement(By.id("page_x002e_components_x002e_slingshot-login_x0023_default-submit-button")).click();
         Thread.sleep(4000);
     }
-
+    
+    @After 
     @And("^je trouve le fichier généré dans l'enplacement statique indiqué dans la configuration de la tache système$")
     public void jeTrouveLeFichierGenereDansLEnplacementStatiqueIndiqueDansLaConfigurationDeLaTacheSysteme() throws Throwable {
 
@@ -234,7 +237,7 @@ public class GenerationPDF {
 
 
     }
-
+     @After
     @And("^je créé le formulaire contenat les champs nom, prénom, dossier dans le noeud de début$")
     public void jeCreeLeFormulaireContenatLesChampsNomPrenomDossierDansLeNoeudDebut() throws Throwable {
         Thread.sleep(5000);
@@ -295,7 +298,7 @@ public class GenerationPDF {
         Thread.sleep(2000);
         base.driver.findElement(By.xpath("//button[contains(text(),'Sauvegarder')]")).click();
     }
-
+    @After
     @And("^je configure la tache système génération PDF statique avc emplacement dynamique$")
     public void jeConfigureLaTacheSystemeGenerationPDFStatiqueAvcEmplacementDynamique() throws Throwable {
         Thread.sleep(2000);
@@ -343,7 +346,7 @@ public class GenerationPDF {
 
         base.driver.findElement(By.xpath("//button[contains(text(),'Enregistrer')]")).click();
     }
-
+     @After
     @When("^je lance le processus Génération d'un PDF statique dans un emplacement dynamique$")
     public void jeLanceLeProcessusGenerationDUnPDFStatiqueDansUnEmplacementDynamique() throws Throwable {
         base.driver.findElement(By.linkText("Génération d'un PDF statique dans un emplacement dynamique")).click();
@@ -368,7 +371,7 @@ public class GenerationPDF {
 
         base.driver.findElement(By.xpath("//button[contains(text(),'Lancer')]")).click();
     }
-
+    @After
     @And("^je trouve le fichier généré dans l'enplacement dynamique indiqué dans le formulaire$")
     public void jeTrouveLeFichierGenereDansLEnplacementDynamiqueIndiqueDansLeFormulaire() throws Throwable {
         Thread.sleep(3000);
@@ -391,7 +394,7 @@ public class GenerationPDF {
 
 
     }
-
+    @After
     @Then("^je réalise le workflow de génération PDF dynamique dans un emplacement statique$")
     public void jeRealiseLeWorkflowDeGenerationPDFDynamiqueDansUnEmplacementStatique() throws Throwable {
         Thread.sleep(2000);
@@ -434,7 +437,7 @@ public class GenerationPDF {
         builder.moveToElement( base.driver.findElement(By.xpath("//div[contains(@id,'-designer')]")), 400, 300).click().build().perform();
         base.driver.findElement(By.id("select")).click();
     }
-
+    @After
     @And("^je créé le formulaire contenat les champs nom, prénom, fichier dans le noeud de début$")
     public void jeCreeLeFormulaireContenatLesChampsNomPrenomFichierDansLeNoeudDeDebut() throws Throwable {
         Thread.sleep(5000);
@@ -495,7 +498,7 @@ public class GenerationPDF {
         Thread.sleep(2000);
         base.driver.findElement(By.xpath("//button[contains(text(),'Sauvegarder')]")).click();
     }
-
+    @After
     @And("^je configure la tache système génération PDF dynamique avc emplacement statique$")
     public void jeConfigureLaTacheSystemeGenerationPDFDynamiqueAvcEmplacementStatique() throws Throwable {
         Thread.sleep(2000);
@@ -542,7 +545,7 @@ public class GenerationPDF {
 
         base.driver.findElement(By.xpath("//button[contains(text(),'Enregistrer')]")).click();
     }
-
+    @After
     @When("^je lance le processus Génération d'un PDF dynamique dans un emplacement statique$")
     public void jeLanceLeProcessusGenerationDUnPDFDynamiqueDansUnEmplacementStatique() throws Throwable {
 
@@ -574,7 +577,7 @@ public class GenerationPDF {
         base.driver.findElement(By.xpath("//button[contains(text(),'Lancer')]")).click();
 
     }
-
+    @After
     @And("^je trouve le fichier généré dynamiqument dans l'emplacement statique indiqué dans la configuration de la tache système$")
     public void jeTrouveLeFichierGenereDynamiqumentDansLEmplacementStatiqueIndiqueDansLaConfigurationDeLaTacheSysteme() throws Throwable {
         Thread.sleep(3000);
@@ -593,7 +596,7 @@ public class GenerationPDF {
         }else
             System.out.println("le fichier généré ne contient les données remplis dans le formulaire");
     }
-
+    @After
     @Then("^je réalise le workflow de génération PDF dynamique dans un emplacement dynamique$")
     public void jeRealiseLeWorkflowDeGenerationPDFDynamiqueDansUnEmplacementDynamique() throws Throwable {
         Thread.sleep(2000);
@@ -637,7 +640,7 @@ public class GenerationPDF {
         base.driver.findElement(By.id("select")).click();
     }
 
-
+    @After
     @And("^je créé le formulaire contenat les champs nom, prénom, fichier,dossier dans le noeud de début$")
     public void jeCreeLeFormulaireContenatLesChampsNomPrenomFichierDossierDansLeNoeudDeDebut() throws Throwable {
         Thread.sleep(5000);
@@ -710,7 +713,7 @@ public class GenerationPDF {
         base.driver.findElement(By.xpath("//button[contains(text(),'Sauvegarder')]")).click();
         return;
     }
-
+    @After
     @And("^je configure la tache système génération PDF dynamique avec emplacement dynamique$")
     public void jeConfigureLaTacheSystemeGenerationPDFDynamiqueAvecEmplacementDynamique() throws Throwable {
         Thread.sleep(2000);
@@ -754,7 +757,7 @@ public class GenerationPDF {
 
         base.driver.findElement(By.xpath("//button[contains(text(),'Enregistrer')]")).click();
     }
-
+    @After
     @When("^je lance le processus Génération d'un PDF dynamique dans un emplacement dynamique$")
     public void jeLanceLeProcessusGenrationDUnPDFDynamiqueDansUnEmplacementDynamique() throws Throwable {
         base.driver.findElement(By.linkText("Génération d'un PDF dynamique dans un emplacement dynamique")).click();
@@ -798,7 +801,7 @@ public class GenerationPDF {
 
         base.driver.findElement(By.xpath("//button[contains(text(),'Lancer')]")).click();
     }
-
+     @After
     @And("^je trouve le fichier généré dynamiqument dans l'emplacement dynamique$")
     public void jeTrouveLeFichierGenereDynamiqumentDansLEmplacementDynamique() throws Throwable {
         Thread.sleep(3000);
