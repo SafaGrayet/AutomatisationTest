@@ -2,6 +2,7 @@ package Steps;
 
 import Base.BaseUtil;
 import cucumber.api.PendingException;
+import cucumber.api.java.After;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
@@ -26,7 +27,7 @@ public class EnvoieMailSteps {
     }
 
 
-
+    @After
     @Then("^je réalise le workflow de Envoie Mail$")
     public void jeRealiseLeWorkflowDeEnvoieMail() throws Throwable {
 
@@ -71,7 +72,7 @@ public class EnvoieMailSteps {
         base.driver.findElement(By.id("select")).click();
 
     }
-
+    @After
     @And("^je configure la tache système envoie mail$")
     public void jeConfigureLaTacheSystemeEnvoieMail() throws Throwable {
         Thread.sleep(2000);
@@ -103,7 +104,7 @@ public class EnvoieMailSteps {
 
 
     }
-
+    @After
     @When("^je lance le processus Evoie Mail à un utilisateur statique$")
     public void jeLanceLeProcessusEvoieMailAUnUtilisateurStatique() throws Throwable {
         base.driver.findElement(By.linkText("Evoie Mail à un utilisateur statique")).click();
@@ -112,12 +113,12 @@ public class EnvoieMailSteps {
         base.driver.findElement(By.xpath("//button[contains(text(),'Lancer')]")).click();
         Thread.sleep(2000);
     }
-
+    @After
     @Then("^je reçue le mail dans la boite de réception de l'utilisateur indiqué statiquement$")
     public void jeRecueLeMailDansLaBoiteDeReceptionDeLUtilisateurIndiqueStatiquement() throws Throwable {
 
     }
-
+    @After
     @And("^je configure la tache système envoie mail à un initiateur$")
     public void jeConfigureLaTacheSystemeEnvoieMailAUnInitiateur() throws Throwable {
         Thread.sleep(2000);
@@ -149,7 +150,7 @@ public class EnvoieMailSteps {
         base.driver.findElement(By.xpath("//textarea[contains(@id,'editProcessing_prop_send-mail_sendMailText')]")).sendKeys("mail test");
         base.driver.findElement(By.xpath("//button[contains(text(),'Enregistrer')]")).click();
     }
-
+    @After
     @When("^je lance le processus Evoie Mail à un initiateur$")
     public void jeLanceLeProcessusEvoieMailAUnInitiateur() throws Throwable {
         base.driver.findElement(By.linkText("Evoie Mail à un initiateur")).click();
@@ -159,12 +160,12 @@ public class EnvoieMailSteps {
         Thread.sleep(2000);
     }
 
-
+    @After
     @Then("^je reçue le mail dans la boite de réception de l'initiateur$")
     public void jeRecueLeMailDansLaBoiteDeReceptionDeLInitiateur() throws Throwable {
 
     }
-
+    @After
     @And("^je configure la tache système Evoie Mail à un utilisateur dynamique$")
     public void jeConfigureLaTacheSystemeEvoieMailAUnUtilisateurDynamique() throws Throwable {
         Thread.sleep(2000);
@@ -200,12 +201,12 @@ public class EnvoieMailSteps {
         base.driver.findElement(By.xpath("//button[contains(text(),'Enregistrer')]")).click();
 
     }
-
+    @After
     @Then("^je reçue le mail dans la boite de réception de l'utilisateur indiqué dynamiquement$")
     public void jeRecueLeMailDansLaBoiteDeRcceptionDeLUtilisateurIndiqucDynamiquement() throws Throwable {
 
     }
-
+    @After
     @When("^je lance le processus Evoie Mail à un utilisateur dynamique$")
     public void jeLanceLeProcessusEvoieMailAUnUtilisateurDynamique() throws Throwable {
         Thread.sleep(2000);
@@ -226,7 +227,7 @@ public class EnvoieMailSteps {
 
 
     }
-
+    @After
     @And("^je configure la tache système Evoie Mail à un chef hiérarchique statique$")
     public void jeConfigureLaTacheSystemeEvoieMailAUnChefHierarchiqueStatique() throws Throwable {
         Thread.sleep(2000);
@@ -266,7 +267,7 @@ public class EnvoieMailSteps {
         base.driver.findElement(By.xpath("//textarea[contains(@id,'editProcessing_prop_send-mail_sendMailText')]")).sendKeys("mail test");
         base.driver.findElement(By.xpath("//button[contains(text(),'Enregistrer')]")).click();
     }
-
+    @After
     @When("^je lance le processus Evoie Mail à un chef hiérarchique statique$")
     public void jeLanceLeProcessusEvoieMailAUnChefHierarchiqueStatique() throws Throwable {
         base.driver.findElement(By.linkText("Evoie Mail à un chef hiérarchique statique")).click();
@@ -276,12 +277,12 @@ public class EnvoieMailSteps {
         Thread.sleep(2000);
 
     }
-
+    @After
     @Then("^je reçue le mail dans la boite de réception du chef hiérarchique statique$")
     public void jeRecueLeMailDansLaBoiteDeReceptionDuChefHierarchiqueStatique() throws Throwable {
 
     }
-
+    @After
     @And("^je configure la tache système Evoie Mail au chef hiérarchique de l'initiateur$")
     public void jeConfigureLaTacheSystemeEvoieMailAuChefHierarchiqueDeLInitiateur() throws Throwable {
         Thread.sleep(2000);
@@ -322,12 +323,12 @@ public class EnvoieMailSteps {
         base.driver.findElement(By.xpath("//textarea[contains(@id,'editProcessing_prop_send-mail_sendMailText')]")).sendKeys("mail test");
         base.driver.findElement(By.xpath("//button[contains(text(),'Enregistrer')]")).click();
     }
-
+    @After
     @Then("^je reçue le mail dans la boite de réception du chef hiérarchique de l'initiateur$")
     public void jeRecueLeMailDansLaBoiteDeReceptionDuChefHierarchiqueDeLInitiateur() throws Throwable {
 
     }
-
+    @After
     @When("^je lance le processus Evoie Mail au chef hiérarchique de l'initiateur$")
     public void jeLanceLeProcessusEvoieMailAuChefHierarchiqueDeLInitiateur() throws Throwable {
         base.driver.findElement(By.linkText("Evoie Mail au chef hiérarchique de l'initiateur")).click();
@@ -336,7 +337,7 @@ public class EnvoieMailSteps {
         base.driver.findElement(By.xpath("//button[contains(text(),'Lancer')]")).click();
         Thread.sleep(2000);
     }
-
+    @After
     @And("^je configure la tache système Envoie mail au chef hiérarchique d'un utilisateur dynamique$")
     public void jeConfigureLaTacheSystemeEnvoieMailAuChefHierarchiqueDUnUtilisateurDynamique() throws Throwable {
         Thread.sleep(2000);
@@ -381,7 +382,7 @@ public class EnvoieMailSteps {
         base.driver.findElement(By.xpath("//button[contains(text(),'Enregistrer')]")).click();
     }
 
-
+    @After
     @When("^je lance le processus Envoie mail au chef hiérarchique d'un utilisateur dynamique$")
     public void jeLanceLeProcessusEnvoieMailAuChefHierarchiqueDUnUtilisateurDynamique() throws Throwable {
         Thread.sleep(2000);
@@ -400,7 +401,7 @@ public class EnvoieMailSteps {
         base.driver.findElement(By.xpath("//button[contains(text(),'Lancer')]")).click();
         Thread.sleep(2000);
     }
-
+    @After
     @Then("^je reçue le mail dans la boite de réception du chef hiérarchique de l'utilisateur indiqué dynamiquement$")
     public void jeRecueLeMailDansLaBoiteDeReceptionDuChefHierarchiqueDeLUtilisateurIndiqueDynamiquement() throws Throwable {
 
