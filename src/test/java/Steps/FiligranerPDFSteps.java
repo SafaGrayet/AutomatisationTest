@@ -3,6 +3,7 @@ package Steps;
 import Base.BaseUtil;
 import Elements.Bouttonn;
 import cucumber.api.PendingException;
+import cucumber.api.java.After;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -29,14 +30,14 @@ public class FiligranerPDFSteps extends BaseUtil {
     }
 
 
-
+    @After
     @Given("^je connecte à Averroès en tant que admin$")
     public void jeConnecteAAverroesEnTantQueAdmin() throws Throwable {
         System.out.println("Connnexion valide à Avveroès");
 
 
     }
-
+    @After
     @Then("^je vois le dashboard d'admin$")
     public void jeVoisLeDashboardDAdmin() throws Throwable {
         if(base.driver.findElement(By.id("global_x002e_header_x0023_default-searchText")).isEnabled()){
@@ -44,7 +45,7 @@ public class FiligranerPDFSteps extends BaseUtil {
 
         }
     }
-
+    @After
     @And("^je clique sur le lien du dashlet administration processus$")
     public void jeCliqueSurLeLienDuDashletAdministrationProcessus() throws Throwable {
 
@@ -55,7 +56,7 @@ public class FiligranerPDFSteps extends BaseUtil {
 
         base.driver.manage().timeouts().pageLoadTimeout(50, TimeUnit.SECONDS);
     }
-
+    @After
     @And("^je créé un nouveau processus$")
     public void jeCreeUnNouveauProcessus() throws Throwable {
 
@@ -79,7 +80,7 @@ public class FiligranerPDFSteps extends BaseUtil {
 
         }
     }
-
+    @After
     @And("^je réalise le workflow de filigranner PDF$")
     public void jeRealiseLeWorkflowDeFiligrannerPDF() throws Throwable {
 
@@ -150,7 +151,7 @@ public class FiligranerPDFSteps extends BaseUtil {
 
 
     }
-
+    @After
     @And("^je configure l'action de la tache système$")
     public void jeConfigureLActionDeLaTacheSysteme() throws Throwable {
         Thread.sleep(3000);
@@ -228,7 +229,7 @@ public class FiligranerPDFSteps extends BaseUtil {
 
 
     }
-
+    @After
     @And("^je clique sur l'icone générer$")
     public void jeCliqueSurLIconeGenerer() throws Throwable {
         Thread.sleep(5000);
@@ -241,7 +242,7 @@ public class FiligranerPDFSteps extends BaseUtil {
         base.driver.findElement(By.xpath("//button[contains(@id,'generateWorkflow-button-button')]")).click();
         Thread.sleep(45000);
     }
-
+    @After
     @And("^je clique sur l'icone activer$")
     public void jeCliqueSurLIconeActiver() throws Throwable {
         //liste de processus
@@ -259,7 +260,7 @@ public class FiligranerPDFSteps extends BaseUtil {
 
 
     }
-
+    @After
     @And("^je consule la dashlet processus$")
     public void jeConsuleLaDashletProcessus() throws Throwable {
         Thread.sleep(2000);
@@ -273,7 +274,7 @@ public class FiligranerPDFSteps extends BaseUtil {
 
 
     }
-
+    @After
     @And("^je lance le processus$")
     public void jeLanceLeProcessus() throws Throwable {
         Thread.sleep(2000);
@@ -290,7 +291,7 @@ public class FiligranerPDFSteps extends BaseUtil {
         //bouton lancer
         base.driver.findElement(By.xpath("//button[contains(text(),'Lancer')]")).click();
     }
-
+    @After
     @And("^je consulte la dashlet Bibliothéque$")
     public void jeConsulteLaDashletBibliotheque() throws Throwable {
         Thread.sleep(2000);
@@ -302,7 +303,7 @@ public class FiligranerPDFSteps extends BaseUtil {
         base.driver.findElement(By.id("page_x002e_components_x002e_slingshot-login_x0023_default-submit-button")).click();
         Thread.sleep(4000);
     }
-
+    @After
     @Then("^je trouve le document filigrané$")
     public void jeTrouveLeDocumentFiligrane() throws Throwable {
 
