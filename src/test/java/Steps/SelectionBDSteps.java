@@ -2,6 +2,7 @@ package Steps;
 
 import Base.BaseUtil;
 import cucumber.api.PendingException;
+import cucumber.api.java.After;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
@@ -30,6 +31,7 @@ public class SelectionBDSteps {
     public SelectionBDSteps(BaseUtil base) throws AWTException {
         this.base = base;
     }
+    @After
     @And("^je réalise le workflow de sélection dans la base de doonée$")
     public void jeRealiseLeWorkflowDeSelectionDansLaBaseDeDoonee() throws Throwable {
         Thread.sleep(3000);
@@ -101,7 +103,7 @@ public class SelectionBDSteps {
 
         base.driver.findElement(By.id("select")).click();
     }
-
+    @After
     @And("^je créé le formulaire contenat les champs nom et prénom dans la tache utilisateur$")
     public void jeCreeLeFormulaireContenatLesChampsNomEtPrenomDansLaTacheSysteme() throws Throwable {
         Thread.sleep(5000);
@@ -148,7 +150,7 @@ public class SelectionBDSteps {
         Thread.sleep(2000);
         base.driver.findElement(By.xpath("//button[contains(text(),'Sauvegarder')]")).click();
     }
-
+    @After
     @And("^je configure l'action de la tache système selection dans la base de données$")
     public void jeConfigureLActionDeLaTacheSystemeSelectionDansLaBaseDeDonnees() throws Throwable {
         Thread.sleep(2000);
@@ -203,7 +205,7 @@ public class SelectionBDSteps {
         ((JavascriptExecutor)base.driver).executeScript("document.getElementsByClassName('yui-button yui-submit-button')[0].click();");
         Thread.sleep(1000);
     }
-
+    @After
     @When("^je lance le processus Sélection dans la base de données$")
     public void jeLanceLeProcessusSelectionDansLaBaseDeDonnees() throws Throwable {
         base.driver.findElement(By.linkText("Sélection de la base de données")).click();
@@ -212,7 +214,7 @@ public class SelectionBDSteps {
         base.driver.findElement(By.xpath("//button[contains(text(),'Lancer')]")).click();
         Thread.sleep(2000);
     }
-
+    @After
     @Then("^je vois que les données de la base de données sont figurer dans le formulaire$")
     public void jeVoisQueLesDonneesDeLaBaseDeDonneesSontFigurerDansLeFormulaire() throws Throwable {
         Class.forName("org.postgresql.Driver");
