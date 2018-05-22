@@ -24,7 +24,7 @@ public class AlimentationVariableTest {
     Actions builder = new Actions(base.driver);
 
 
-    public AlimentationVariableSteps(BaseUtil base) throws AWTException {
+    public AlimentationVariableTest(BaseUtil base) throws AWTException {
         this.base = base;
     }
     
