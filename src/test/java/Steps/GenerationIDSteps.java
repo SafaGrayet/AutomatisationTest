@@ -2,6 +2,7 @@ package Steps;
 
 import Base.BaseUtil;
 import cucumber.api.PendingException;
+import cucumber.api.java.After;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
@@ -24,6 +25,7 @@ public class GenerationIDSteps {
 
         this.base = base;
     }
+    @After
     @And("^je réalise le workflow de \"([^\"]*)\"$")
     public void jeRealiseLeWorkflowDe(String arg0) throws Throwable {
 
@@ -69,7 +71,7 @@ public class GenerationIDSteps {
 
 
     }
-
+    @After
     @And("^je consulte la dashlet administration processus$")
     public void jeConsulteLaDashletAdministrationProcessus() throws Throwable {
 
@@ -84,7 +86,7 @@ public class GenerationIDSteps {
         //base.driver.findElement(By.xpath("//a[@href='/share/page/console/process/workflow-console'][contains(text(),'Voir tout')]")).click();
 
     }
-
+    @After
     @When("^je cliquer sur \"([^\"]*)\"$")
     public void jeCliquerSur(String arg0) throws Throwable {
         //WebDriverWait some_element = new WebDriverWait(base.driver,100);
@@ -106,7 +108,7 @@ public class GenerationIDSteps {
             System.out.println("Le compteur n'a pas s'incrémeté");
 
     }
-
+    @After
     @And("^je configure l'action de la tache système Génération ID$")
     public void jeConfigureLActionDeLaTacheSystemeGenerationID() throws Throwable {
         Thread.sleep(4000);
@@ -150,7 +152,7 @@ public class GenerationIDSteps {
 
 
     }
-
+    @After
     @And("^je lance le processus Générer Identifiant$")
     public void jeLanceLeProcessusGenererIdentifiant() throws Throwable {
         base.driver.findElement(By.linkText("Générer Identifiant")).click();
