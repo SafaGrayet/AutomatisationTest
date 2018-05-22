@@ -18,7 +18,7 @@ import java.util.concurrent.TimeUnit;
 
 import static Steps.LoginStep.dragAndDropElement;
 
-public class AlimentationVariableSteps {
+public class AlimentationVariableTest {
     public BaseUtil base;
     Robot bot = new Robot();
     Actions builder = new Actions(base.driver);
