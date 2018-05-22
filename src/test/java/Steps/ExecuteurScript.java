@@ -2,6 +2,7 @@ package Steps;
 
 import Base.BaseUtil;
 import cucumber.api.PendingException;
+import cucumber.api.java.After;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
@@ -25,6 +26,7 @@ public class ExecuteurScript {
     public ExecuteurScript(BaseUtil base) throws AWTException {
         this.base = base;
     }
+    @After
     @And("^je créé la varible de processus Hello de type texte$")
     public void jeCreeLaVaribleDeProcessusHelloDeTypeTexte() throws Throwable {
         Thread.sleep(3000);
@@ -64,7 +66,7 @@ public class ExecuteurScript {
 
 
     }
-
+    @After
     @And("^je réalise le workflow d'exécuteur de script$")
     public void jeRealiseLeWorkflowDExecuteurDeScript() throws Throwable {
         Thread.sleep(3000);
@@ -136,7 +138,7 @@ public class ExecuteurScript {
 
         base.driver.findElement(By.id("select")).click();
     }
-
+    @After
     @And("^je créé le formulaire contenat le champ Hello dans la tache utilisateur$")
     public void jeCreeLeFormulaireContenatLeChampHelloDansLaTacheUtilisateur() throws Throwable {
         Thread.sleep(5000);
@@ -175,7 +177,7 @@ public class ExecuteurScript {
         Thread.sleep(2000);
         base.driver.findElement(By.xpath("//button[contains(text(),'Sauvegarder')]")).click();
     }
-
+    @After
     @And("^je configure l'action de la tache système exécueur script$")
     public void jeConfigureLActionDeLaTacheSystemeExecueurScript() throws Throwable {
 
@@ -204,7 +206,7 @@ public class ExecuteurScript {
 
 
     }
-
+    @After
     @When("^je lance le processus Script Hello World$")
     public void jeLanceLeProcessusScriptHelloWorld() throws Throwable {
         base.driver.findElement(By.linkText("Script Hello World")).click();
