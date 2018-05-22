@@ -2,6 +2,7 @@ package Steps;
 
 import Base.BaseUtil;
 import cucumber.api.PendingException;
+import cucumber.api.java.After;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
@@ -30,7 +31,7 @@ public class MetadonneesSteps {
         this.base = base;
     }
 
-
+    @After
     @And("^je créé la varible de processus \"([^\"]*)\" de type Contenu GED$")
     public void jeCreeLaVaribleDeProcessusDeTypeContenuGED(String arg0) throws Throwable {
 
@@ -61,7 +62,7 @@ public class MetadonneesSteps {
 
         base.driver.findElement(By.xpath("//button[contains(@id,'newVariable-form-submit-button')]")).click();
     }
-
+    @After
     @And("^je réalise le workflow Copie de métadonnées: document vers workflow$")
     public void jeRealiseLeWorkflowCopieDeMetadonneesDocumentVersWorkflow() throws Throwable {
 
@@ -135,7 +136,7 @@ public class MetadonneesSteps {
         base.driver.findElement(By.id("select")).click();
 
     }
-
+    @After
     @And("^je créé le formulaire contenant le champs dossier  dans le noeud de début$")
     public void jeCreeLeFormulaireContenatLeChampsDossierDansLeNoeudDeDebut() throws Throwable {
         Thread.sleep(1000);
@@ -169,7 +170,7 @@ public class MetadonneesSteps {
         base.driver.findElement(By.xpath("//button[contains(text(),'Sauvegarder')]")).click();
 
     }
-
+    @After
     @And("^je créé le formulaire contenat les champs nom, description et titre dans la tache utilisateur$")
     public void jeCreeLeFormulaireContenantLesChampsNomDescriptionEtTitreLaTacheUtilisateur() throws Throwable {
         Thread.sleep(5000);
@@ -223,7 +224,7 @@ public class MetadonneesSteps {
         Thread.sleep(2000);
         base.driver.findElement(By.xpath("//button[contains(text(),'Sauvegarder')]")).click();
     }
-
+    @After
     @And("^je configure l'action de la tache système Copie de métadonnées: document vers workflow$")
     public void jeConfigureLActionDeLaTacheSystemeCopieDeMetadonnesDocumentVersWorkflow() throws Throwable {
         //cliquer sur la tache système
@@ -302,7 +303,7 @@ public class MetadonneesSteps {
 
 
     }
-
+    @After
     @When("^je lance le processus copie méradonnées: document vers workflow$")
     public void jeLanceLeProcessusCopieMeradonneesDocumentVersWorkflow() throws Throwable {
         Thread.sleep(2000);
@@ -324,12 +325,12 @@ public class MetadonneesSteps {
 
         base.driver.findElement(By.xpath("//button[contains(text(),'Lancer')]")).click();
     }
-
+    @After
     @Then("^je vois le formulaire avec le nom, le titre et la description du dossier selectinné dynamiquement$")
     public void jeVoisLeFormulaireAvecLeNomLeTitreEtLaDescriptionDuDossierSelectinneDynamiquement() throws Throwable {
 
     }
-
+    @After
     @And("^je créé la varible de processus \"([^\"]*)\" de type Contenu GED contenu$")
     public void jeCreeLaVaribleDeProcessusDeTypeContenuGEDContenu(String arg0) throws Throwable {
 
@@ -349,7 +350,7 @@ public class MetadonneesSteps {
 
         base.driver.findElement(By.xpath("//button[contains(@id,'newVariable-form-submit-button')]")).click();
     }
-
+    @After
     @And("^je créé le formulaire contenant le champs fichier  dans le noeud de début$")
     public void jeCreeLeFormulaireContenantLeChampsFichierDansLeNoeudDeDebut() throws Throwable {
         Thread.sleep(1000);
@@ -382,7 +383,7 @@ public class MetadonneesSteps {
         Thread.sleep(2000);
         base.driver.findElement(By.xpath("//button[contains(text(),'Sauvegarder')]")).click();
     }
-
+     @After
     @And("^je configure l'action de la tache système Copie de métadonnées: document vers workflow d'un contenu$")
     public void jeConfigureLActionDeLaTacheSystemeCopieDeMetadonneesDocumentVersWorkflowDUnContenu() throws Throwable {
         //cliquer sur la tache système
@@ -457,7 +458,7 @@ public class MetadonneesSteps {
 
 
     }
-
+    @After
     @When("^je lance le processus copie méradonnées: document vers workflow d'un contenu$")
     public void jeLanceLeProcessusCopieMeradonneesDocumentVersWorkflowDUnContenu() throws Throwable {
 
@@ -480,7 +481,7 @@ public class MetadonneesSteps {
 
         base.driver.findElement(By.xpath("//button[contains(text(),'Lancer')]")).click();
     }
-
+    @After
     @And("^je réalise le workflow Copie de métadonnées document vers workflow d'un fichier attaché$")
     public void jeRealiseLeWorkflowCopieDeMetadonneesDocumentVersWorkflowDUnFichierAttache() throws Throwable {
 
@@ -559,7 +560,7 @@ public class MetadonneesSteps {
         base.driver.findElement(By.id("select")).click();
 
     }
-
+    @After
     @And("^je configure l'action de la tache système Copie de métadonnées document vers workflow d'un document attaché$")
     public void jeConfigureLActionDeLaTacheSystemeCopieDeMetadonneesDocumentVersWorkflowDUnDocumentAttache() throws Throwable {
         //cliquer sur la tache système
@@ -629,7 +630,7 @@ public class MetadonneesSteps {
 
         base.driver.findElement(By.xpath("//button[contains(text(),'OK')]")).click();
     }
-
+    @After
     @When("^je lance le processus copie méradonnées  document vers workflow d'un fichier attaché$")
     public void jeLanceLeProcessusCopieMeradonneesDocumentVersWorkflowDUnFichierAttache() throws Throwable {
 
@@ -646,7 +647,7 @@ public class MetadonneesSteps {
 
         base.driver.findElement(By.xpath("//button[contains(text(),'Lancer')]")).click();
     }
-
+    @After
     @Then("^je vois le formulaire avec le nom, le titre et la description du fichier attaché$")
     public void jeVoisLeFormulaireAvecLeNomLeTitreEtLaDescriptionDuFichierAttache() throws Throwable {
 
