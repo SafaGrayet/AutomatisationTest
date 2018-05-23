@@ -16,7 +16,7 @@ import org.testng.annotations.Test;
     @CucumberOptions(features = "src/test/java/features",
             format = {"pretty", "html:target/cucumber", "json:target/cucumber-  report.json"},
             monochrome = true,
-            glue = {"steps"})
+            glue = {"Steps"})
 
 public class TestRunner extends AbstractTestNGCucumberTests {
         private TestNGCucumberRunner testNGCucumberRunner;
@@ -24,7 +24,7 @@ public class TestRunner extends AbstractTestNGCucumberTests {
         public void setUpClass() throws Exception {
             testNGCucumberRunner = new TestNGCucumberRunner(this.getClass());
         }
-        @Test(groups = "steps", description = "Runs Cucumber Feature", dataProvider = "features")
+        @Test(groups = "Steps", description = "Runs Cucumber Feature", dataProvider = "features")
         public void feature(CucumberFeatureWrapper cucumberFeature) {
             testNGCucumberRunner.runCucumber(cucumberFeature.getCucumberFeature());
         }
